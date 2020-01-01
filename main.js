@@ -8,14 +8,21 @@ let button = document.getElementById("button");
 let cInput = document.getElementById('c-input');
 let fInput = document.getElementById('f-input');
 
+// Functions to convert temperatures
+const cToF = c => (c * 9) / 5 + 32;
+const fToC = f => (f - 32) * (5 / 9);
 
 const convert = () => {
   // if there is a value in the celcius box, save it to state.cVal
   if (cInput.value !== "" && fInput.value === "") {
     state.cVal = cInput.value;
+    // take the current state.cVal and pass it to the cToF function to convert to fahrenheit, display the conversion in the fahrenheit box
+    fInput.value = cToF(state.cVal);
     // but if there's a value in the fahrenheit box, save it to the state.fVal
   } else if (fInput.value !== "" && cInput.value === "") {
     state.fVal = fInput.value;
+    // take the current state.fVal and pass it to the fToC function to convert to celcius, display the conversion in the celcius box
+    cInput.value = fToC(state.fVal);
   }
 
   // if the button is "submit", change it to "reset"
@@ -31,16 +38,6 @@ const convert = () => {
     state.fVal = "";
     fInput.value = ""
   }
-
-  console.log(state)
 }
 
 button.addEventListener("click", convert);
-
-/*
-4) Write a function that converts fahrenheit, given as an argument, to celcius.
-const fToC = f => (f - 32) * (5 / 9);
-
-5) Write a function that converts celcius, given as an argumen, to fahrenheit.
-const cToF = c => (c * 9) / 5 + 32;
-*/
