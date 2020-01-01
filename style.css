@@ -1,0 +1,95 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 14px;
+  color: #D92B2B;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.bd-1 { border: 1px solid #707070 }
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-container {
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+}
+
+#container {
+  align-items: center;
+  width: 330px;
+  height: 246px;
+  background: #F2F1E4;
+  border-radius: 5px;
+}
+
+#header {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #f2ce1b;
+  text-shadow: 1px 1px 1px #F2A20C;
+}
+
+.c-container, 
+.f-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.f-container { margin-top: 20px; }
+
+.c-container label { margin-right: 46px; }
+
+.f-container label { margin-right: 18px; }
+
+.input {
+  width: 50px;
+  height: 30px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#button {
+  margin-top: 36px;
+  width: 150px;
+  height: 30px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  color: #fff;
+  background: #8C0303;
+  border: 1px solid #707070;
+}
+
+.reset-btn {
+  color: #8C0303;
+  background: #F2A20C;
+  border: 1px solid #8C0303;
+}
