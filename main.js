@@ -9,10 +9,15 @@ let cInput = document.getElementById('c-input');
 let fInput = document.getElementById('f-input');
 
 // Functions to convert temperatures
-const cToF = c => (c * 9) / 5 + 32;
-const fToC = f => (f - 32) * (5 / 9);
+const cToF = c => ((c * 9) / 5 + 32).toFixed(1);
+const fToC = f => ((f - 32) * (5 / 9)).toFixed(1);
 
 const convert = () => {
+  // if there is no value in celcius or fahrenheit box, do nothing
+  if (button.className === "submit-btn" && cInput.value === "" && fInput.value === "") {
+    return
+  }
+
   // if there is a value in the celcius box, save it to state.cVal
   if (cInput.value !== "" && fInput.value === "") {
     state.cVal = cInput.value;
@@ -38,6 +43,7 @@ const convert = () => {
     state.fVal = "";
     fInput.value = ""
   }
+  console.log(state);
 }
 
 button.addEventListener("click", convert);
