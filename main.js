@@ -43,7 +43,6 @@ const convert = () => {
     state.fVal = "";
     fInput.value = ""
   }
-  console.log(state);
 }
 
 button.addEventListener("click", convert);
